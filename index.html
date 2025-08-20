@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>La Hora Master</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ff9900, #ff3300);
+      text-align: center;
+      color: white;
+      
+      background-size: cover;
+    }
+
+    .logo {
+      margin-top: 50px;
+    }
+
+    .player {
+      margin-top: 60px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 25px;
+    }
+
+    .player button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      margin: 0 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .player span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .credit {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="LHM-Logo.png" alt="La Hora Master" width="300">
+  </div>
+
+  <div class="player">
+    <button id="play">▶</button>
+    <button id="pause">⏸</button>
+    <span>La Hora Master</span>
+  </div>
+
+  <div class="credit">
+    creado por JUAN BECERRA
+  </div>
+
+  <!-- Reproductor -->
+  <audio id="radioPlayer" preload="none">
+    <!-- ⚠️ Acá tenés que poner tu URL de streaming -->
+    <source src="http://lahoramaster.radio12345.com/;" type="audio/mpeg">
+    Tu navegador no soporta audio en HTML5.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("radioPlayer");
+    document.getElementById("play").addEventListener("click", () => {
+      audio.play();
+    });
+    document.getElementById("pause").addEventListener("click", () => {
+      audio.pause();
+    });
+  </script>
+</body>
+</html>
