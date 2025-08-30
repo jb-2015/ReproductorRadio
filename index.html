@@ -55,31 +55,14 @@
     <img src="LHM-Logo.png" alt="La Hora Master" width="300">
   </div>
 
-  <div class="player">
-    <button id="play">▶</button>
-    <button id="pause">⏸</button>
-    <span>La Hora Master</span>
-  </div>
-
+  
   <div class="credit">
     creado por JUAN BECERRA
   </div>
 
   <!-- Reproductor -->
-  <audio id="radioPlayer" preload="none">
-    <!-- ⚠️ Acá tenés que poner tu URL de streaming -->
-    <source src="https://uk2freenew.listen2myradio.com:10138/" type="audio/mpeg">
-    Tu navegador no soporta audio en HTML5.
-  </audio>
+  <iframe width="70%"  src="https://www.youtube.com/embed/Hgb7W9M61Ew" title="La Hora Master" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-  <script>
-    const audio = document.getElementById("radioPlayer");
-    document.getElementById("play").addEventListener("click", () => {
-      audio.play();
-    });
-    document.getElementById("pause").addEventListener("click", () => {
-      audio.pause();
-    });
-  </script>
+  
 </body>
 </html>
